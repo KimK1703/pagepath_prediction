@@ -25,3 +25,8 @@ predictMarkov <- function(pageview_names) {
   library(jsonlite)
   predict(model$estimate, newdata = fromJSON(pageview_names))
 }
+
+predictMarkovTest <- function() {
+  library(markovchain)
+  predict(model$estimate, newdata = c("/tilbudsavis/", "/"))
+}
