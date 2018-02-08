@@ -28,5 +28,6 @@ predictMarkov <- function(pageview_names) {
 
 predictMarkovTest <- function() {
   library(markovchain)
-  predict(model$estimate, newdata = c("/tilbudsavis/", "/"))
+  result <- predict(model$estimate, newdata = c("/tilbudsavis/", "/"))
+  return(result)
 }
